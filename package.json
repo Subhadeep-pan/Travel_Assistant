@@ -1,0 +1,14 @@
+{
+  "name": "ai-trip-planner",
+  "version": "1.0.0",
+  "description": "Spacious AI Trip Planner with FastAPI, React, and Leaflet Maps",
+  "scripts": {
+    "install:all": "npm.cmd install && npm.cmd install --prefix frontend",
+    "dev:backend": "python -m uvicorn backend.main:app --reload --port 8000",
+    "dev:frontend": "npm.cmd --prefix frontend run dev",
+    "dev": "concurrently --names \"BACKEND,FRONTEND\" -c \"magenta,cyan\" \"npm.cmd run dev:backend\" \"npm.cmd run dev:frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
